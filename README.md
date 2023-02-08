@@ -33,13 +33,5 @@ version ruby 3.0.4 rails 7.0.4
 * 
 db 
 
-    admins Hoan, Duc
-
-    books Hoang Bao, Duc 
-    
-    librarians, libraries  Truong, Duc
-    
-    students Le Bao Anh 
-    
-    transaction, user_mailer Dung# it_nihongo_3_final_project
+     it_nihongo_3_final_project
 # it_nihongo_3_final_project
