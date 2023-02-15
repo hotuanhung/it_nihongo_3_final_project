@@ -1,16 +1,119 @@
-<H1>Welcome to Library</H1>
-<table>
-	<th><strong>Home Page</strong></th>
-	<tr><td></td><tr>
-    <tr><td></td><tr>
-    <tr><td><strong>Students</strong></td><tr>
-    <tr><td><%= link_to 'Student Login (via Email or Google)', new_student_session_path %></td></tr>
-	<tr><td></td><tr>
-    <tr><td></td><tr>
-	<tr><td><strong>Librarians</strong></td><tr>
-    <tr><td><%= link_to 'Librarian Login', new_librarian_session_path %></td></tr>
-	<tr><td></td><tr>
-    <tr><td></td><tr>
-	<tr><td><strong>Administrator</strong></td><tr>
-    <tr><td><%= link_to 'Admin Login', new_admin_session_path %></td></tr>
-</table>
+<header>
+    <style>
+        .homepage{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 32px;
+        }
+        .tesssss{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .homepage_title{
+            text-align: center;
+        }
+        .column {
+            display: flex;
+            justify-content: center;
+            /* float: left;
+            width: 50%; */
+        }
+
+        .row:after {
+            /* content: "";
+            display: table;
+            clear: both; */
+        }
+
+        .row {
+            /* text-align: left; */
+        }
+
+        .word {
+            display: flex;
+            font-size: 18px;
+            margin-right: 20px ;
+            padding: 20px;
+      
+            max-width: 140px;
+            border-radius: 4px;
+            cursor: pointer;
+            align-items: center;
+            color: #fff !important;
+            font-weight: bold;
+        }
+        .btnbg1 {
+            background-color: #4267b2b4;
+        }
+        .btnbg2 {
+            background-color: #00b4ffb4;
+        }
+        .btnbg3 {
+            background-color: #cb2027b4;
+        }
+        .word:hover{
+            background-color: #2ccb20de;
+            color: black;
+        }
+        .text_color_home{
+            color: #fff !important;
+        }
+        
+
+        .word_logo {
+            width: 50px;
+            margin-right: 8px;
+        }
+
+        .home_img{
+            width: 200px;
+        }
+        .home_logo{
+            width: 100px;
+        }
+    </style>
+</header>
+<div class="homepage">
+
+<div>
+<div class="tesssss">
+<H1 class="homepage_title">Library Management</H1>
+<div class="" style="text-align: center;">
+    <img src="https://www.skoolbeep.com/blog/wp-content/uploads/2020/12/HOW-DO-YOU-DESIGN-A-LIBRARY-MANAGEMENT-SYSTEM-min.png"
+        class="home_img">
+</div>
+</div>
+<div class="row">
+    <div class="column">
+       
+        <div class="word btnbg1">
+        <img class="word_logo" src="https://cdn-icons-png.flaticon.com/512/2302/2302834.png"/>
+            <span class="text_color_home">
+                <!-- Student Login -->
+                <%= link_to 'Student Login' , new_student_session_path %>
+            </span>
+        </div>
+
+        <div class="word btnbg2">
+            
+        <img class="word_logo" src="https://cdn-icons-png.flaticon.com/512/1596/1596392.png"/>
+            <span>
+                <!-- Librarian Login -->
+                <%= link_to 'Librarian Login' , new_librarian_session_path %>
+            </span>
+        </div>
+
+        <div class="word btnbg3">
+        <img class="word_logo" src="https://cdn-icons-png.flaticon.com/512/2206/2206368.png"/>
+            <span>
+                <!-- Admin Login -->
+                <%= link_to 'Admin Login' , new_admin_session_path %>
+            </span>
+         </div>
+    </div>
+    </div>
+
+</div>
+</div>

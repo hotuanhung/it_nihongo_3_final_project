@@ -8,7 +8,8 @@
       <th>Email</th>
       <th>Library</th>
       <th>Approved</th>
-      <th colspan="3"></th>
+      <th>Action</th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -19,9 +20,11 @@
         <td><%= librarian.email %></td>
         <td><%= librarian.library %></td>
         <td><%= librarian.approved %></td>
-        <td><%= link_to 'Show', librarian %></td>
-        <td><%= link_to 'Edit/Approve', edit_librarian_path(librarian) %></td>
-        <td><%= link_to 'Destroy', librarian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+        <%= link_to 'Show', librarian %>
+        <%= link_to 'Edit/Approve', edit_librarian_path(librarian) %>
+        <%= link_to 'Destroy', librarian, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>

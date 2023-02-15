@@ -1,8 +1,8 @@
 class CreateCheckouts < ActiveRecord::Migration[6.0]
   def change
     create_table :checkouts do |t|
-      t.references :student, null: false, foreign_key: true
-      t.references :book, null: false, foreign_key: true
+      t.references :student, null: false, foreign_key: true, :on_delete => :cascade, :on_update => :cascade
+      t.references :book, null: false, foreign_key: true, :on_delete => :cascade, :on_update => :cascade
       t.date :issue_date
       t.date :return_date
       t.integer :validity

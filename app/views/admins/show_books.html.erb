@@ -13,7 +13,7 @@
 	  <% end %>
 
 <% end %>
-<table>
+<table border='1'>
   <thead>
     <tr>
       <th>Isbn</th>
@@ -42,9 +42,9 @@
           <td><%= link_to 'Bookmark', controller: "books", action: "bookmark", id: book %></td>
           <td><%= link_to 'Request Book', controller: "books", action: "requestBook", id: book %></td>
         <% else %>
-		  <td><%= link_to 'Show', book %></td>
-		  <td><%= link_to 'Edit', edit_book_path(book) %></td>
-		  <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Show', book %></td>
+          <td><%= link_to 'Edit', edit_book_path(book) %></td>
+          <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           <td><%= link_to 'View Book History', controller: "books", action: "viewBookHistory", id: book %></td>
         <%end%>
       </tr>

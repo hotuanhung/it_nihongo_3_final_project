@@ -1,21 +1,16 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+## On local
 ruby '3.0.4'
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.0.0'
-# Use sqlite3 as the database for Active Record
-group :development do
-	gem 'sqlite3', '~> 1.4.1'
-end
 
-group :test do
-	gem 'sqlite3', '~> 1.4.1'
-end
-group :production do
-	gem 'pg'
-end
+## On paiza
+# ruby '2.7.0'
+# gem 'rails', '~> 6.0.0'
+
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3', '~> 1.4.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

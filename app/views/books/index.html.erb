@@ -24,7 +24,7 @@
       <th>Published</th>
       <th>Edition</th>
       <th>Subject</th>
-      <th>Summary</th>
+
       <th>Category</th>
 	    <th>Special Collection</th>
       <th>Library</th>
@@ -43,14 +43,15 @@
 		    <td><%= book.published %></td>
         <td><%= book.edition %></td>
         <td><%= book.subject %></td>
-        <td><%= book.summary %></td>
+
         <td><%= book.category %></td>		
-        <td><%= if book.special_collection == true
-			'Yes'
-			else
+        <td>
+        <% if book.special_collection == true %>
+			  'Yes'
+			  <% else %>
 			  'No'
-			end
-			 %></td>
+			<% else %>
+			 </td>
         <td><%=  Library.find(book.library_id ).name %></td>
         <% if book.count > 0 %> 
           <td><%= "Available" %></td>

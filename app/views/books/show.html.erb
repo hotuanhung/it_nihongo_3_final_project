@@ -52,12 +52,11 @@
 
 <p>
   <strong>Special collection:</strong>
-  <%= if @book.special_collection == true
+  <% if @book.special_collection == true %>
     'Yes'
-    else
-      'No'
-    end
-     %>
+  <% else %>
+     'No'
+  <% end %>
 </p>
 
 <p>

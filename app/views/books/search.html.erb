@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
-
-
 <p>
- <table>
+ <table border='1'>
   <thead>
     <tr>
       <th>Isbn</th>
@@ -12,9 +10,7 @@
       <th>Published</th>
       <th>Edition</th>
       <th>Subject</th>
-      <th>Summary</th>
       <th>Category</th>
-      <th>Special Collection</th>
       <th>Library</th>
       <th colspan="4"></th>
     </tr>
@@ -30,21 +26,13 @@
         <td><%= result.published %></td>
         <td><%= result.edition %></td>
         <td><%= result.subject %></td>
-        <td><%= result.summary %></td>
         <td><%= result.category %></td>
-        <td><%= if result.special_collection == true
-			'Yes'
-			else
-			  'No'
-			end
-			 %></td>
         <td><%=  Library.find(result.library_id).name %></td>
-		<% if current_student.nil? %>
-		<td><%= link_to 'Show', controller: "books", action: "show", id: result%></td>
+		    <td><%= link_to 'Show', controller: "books", action: "show", id: result%></td>
         <td><%= link_to 'Checkout', controller: "books", action: "checkout", id: result %></td>
         <td><%= link_to 'Bookmark', controller: "books", action: "bookmark", id: result %></td>
-        <td><%= link_to 'Request Book', controller: "books", action: "requestBook", id: result %></td>
-		<% end %>
+       
+
       </tr>
 	  <% end %>
   </tbody>

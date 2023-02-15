@@ -1,5 +1,5 @@
 <h2>Checked Out Books</h2>
-<table>
+<table border='1'>
   <thead>
     <tr>
       <th>Isbn</th>
@@ -10,9 +10,9 @@
       <th>Edition</th>
       <th>Cover</th>
       <th>Subject</th>
-      <th>Summary</th>
+
       <th>Category</th>
-      <th>Special Collection</th>
+     
       <th>Library</th>
       <th colspan="6"></th>
     </tr>
@@ -27,17 +27,13 @@
         <td><%= book.language %></td>
         <td><%= book.published %></td>
         <td><%= book.edition %></td>
-        <td><%= book.cover %></td>
+        <td><%= image_tag book.cover.url.to_s %></td>
         <td><%= book.subject %></td>
-        <td><%= book.summary %></td>
+        
         <td><%= book.category %></td>
-        <td><%= if book.special_collection  == true
-			'Yes'
-			else
-			  'No'
-			end
-			 %></td>
+        
         <td><%= Library.find(book.library_id).name %></td>
+        <td><%= link_to 'Show', controller: "books", action: "show", id: book%></td>
         <td><%= link_to 'Return Book', controller: "books", action: "returnBook", id: book %></td>
       </tr>
     <% end %>
@@ -46,7 +42,7 @@
 
 
 <h2>Bookmarked Books</h2>
-<table>
+<table border='1'>
   <thead>
   <tr>
     <th>Isbn</th>
@@ -57,9 +53,8 @@
     <th>Edition</th>
     <th>Cover</th>
     <th>Subject</th>
-    <th>Summary</th>
+
     <th>Category</th>
-    <th>Special Collection</th>
     <th>Library</th>
     <th colspan="6"></th>
   </tr>
@@ -74,65 +69,14 @@
       <td><%= book.language %></td>
       <td><%= book.published %></td>
       <td><%= book.edition %></td>
-      <td><%= book.cover %></td>
+      <td><%= image_tag book.cover.url.to_s %></td>
       <td><%= book.subject %></td>
-      <td><%= book.summary %></td>
       <td><%= book.category %></td>
-      <td><%= if book.special_collection  == true
-			'Yes'
-			else
-			  'No'
-			end
-			 %></td>
       <td><%= Library.find(book.library_id).name %></td>
+      <td><%= link_to 'Show', controller: "books", action: "show", id: book%></td>
       <td><%= link_to 'Unbookmark', controller: "books", action: "unbookmark", id: book %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
 
-<h2>Requested Books</h2>
-<table>
-  <thead>
-  <tr>
-    <th>Isbn</th>
-    <th>Title</th>
-    <th>Authors</th>
-    <th>Language</th>
-    <th>Published</th>
-    <th>Edition</th>
-    <th>Cover</th>
-    <th>Subject</th>
-    <th>Summary</th>
-    <th>Category</th>
-    <th>Special Collection</th>
-    <th>Library</th>
-    <th colspan="6"></th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @request.each do |book| %>
-
-    <tr>
-      <td><%= book.isbn %></td>
-      <td><%= book.title %></td>
-      <td><%= book.authors %></td>
-      <td><%= book.language %></td>
-      <td><%= book.published %></td>
-      <td><%= book.edition %></td>
-      <td><%= book.cover %></td>
-      <td><%= book.subject %></td>
-      <td><%= book.summary %></td>
-      <td><%= book.category %></td>
-      <td><%= if book.special_collection  == true
-			'Yes'
-			else
-			  'No'
-			end
-			 %></td>
-      <td><%= Library.find(book.library_id).name %></td>
-      <td><%= link_to 'Repeal Request', controller: "books", action: "repealRequest", id: book %></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>

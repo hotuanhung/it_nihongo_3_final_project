@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :students
   resources :home_pages
 
-  root  'home_page#index'
+  root 'home_page#index'
 
   get '/search' => 'books#search', :as => 'search'
   get '/checkout' => 'books#checkout', :as => 'checkout'

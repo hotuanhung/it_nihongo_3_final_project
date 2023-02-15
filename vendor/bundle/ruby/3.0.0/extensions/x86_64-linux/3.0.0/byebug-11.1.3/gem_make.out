@@ -1,0 +1,19 @@
+current directory: /home/hth/project/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+/home/hth/.rbenv/versions/3.0.4/bin/ruby -I /home/hth/.rbenv/versions/3.0.4/lib/ruby/3.0.0 -r ./siteconf20230214-5797-e4en5a.rb extconf.rb
+creating Makefile
+
+current directory: /home/hth/project/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= clean
+
+current directory: /home/hth/project/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\=
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/hth/project/vendor/bundle/ruby/3.0.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20230214-5797-6nqq1c/byebug
